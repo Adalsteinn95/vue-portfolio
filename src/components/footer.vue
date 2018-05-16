@@ -9,7 +9,8 @@ export default {
   name: 'Footer',
   data() {
     return {
-        msg: 'Footer'
+        msg: 'Footer',
+        props: 'title',
     };
   },
 };

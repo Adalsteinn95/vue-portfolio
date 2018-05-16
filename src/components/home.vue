@@ -2,7 +2,7 @@
   <div class='home'>
     <vue-header />
     <h1>{{ header }}</h1>
-    <vue-footer />
+    <vue-footer v-bind="cv" />
   </div>
 </template>
 
@@ -14,9 +14,30 @@ export default {
   name: "home",
   data() {
     return {
-      header: "Welcome to Your Vue.js App",
+      header: "Aðalsteinn Ingi Pálsson",
       cv: {
-        about: "Young computer science student looking for a future job",
+        about: {
+          description: "Young computer science student looking for a future job",
+          email: 'adalsteinn95@gmail.com',
+          github: 'https://github.com/adalsteinn95',
+          linkedIn: 'https://www.linkedin.com/in/a%C3%B0alsteinn-ingi-p%C3%A1lsson/',
+          phonenumber: 8484830,
+          address: 'Breiðavík 13',
+          city: 'Reykjavik',
+          country: 'Iceland',
+          },
+        projects: [
+          {
+            title: 'Weather Wherever',
+            about: 'It\'s a weather site made with NodeJs and plain javascript and CSS on the frontend. We host it through Heroku and we use Google maps API and Dark sky API.',
+            repo: 'https://github.com/weatherwherever/Weather',
+          },
+          {
+            title: 'KewlKwiz',
+            about: 'It\'s a website project that me and my friends did in school.We created a Restful API with Spring(java framework) and React as the Frontend.',
+            repo: 'https://github.com/CodeFriendsHI/React-Redux-Spring-Project',
+          }
+        ],
         education: [
           {
             year: "2015-2018",
@@ -50,7 +71,46 @@ export default {
             position: "Director of Bókasafn Kópavogs",
             contact: "lisa@kopavogur.is"
           }
-        ]
+        ],
+        programmingLang: [
+          {
+            name: 'Javascript',
+            description: 'Has been my main programming language. I have used it In most of my projects wether it is an website, app, API and more. I have also been using some of the frameworks, mostly React',
+          },
+          {
+            name: 'Java',
+            description: 'Is the first programming language that I learned.I have done many projects in it. I like the "object oriented" thinking.',
+          },
+          {
+            name: 'Python',
+            description: 'Mostly used it when I am working with data.',
+          },
+        ],
+        Other: [
+          {
+            header: 'Web and software development',
+            items: ['React', 'NodeJs', 'NPM', 'SCSS', 'Spring', 'Github'],
+          },
+          {
+            header: 'Cloud',
+            items: ['Heroku', 'AWS'],
+          },
+          {
+            header: 'OS',
+            items: ['Linux', 'Z-shell', 'Tmux'],
+          },
+          {
+            header: 'Editors',
+            items: ['Visual Code', 'Atom', 'Vim'],
+          },
+          {
+            header: 'Databases',
+            items: ['PostgreSQL', 'MySQL'],
+          }
+
+        ],
+        basicLang: ['SQL', 'C', 'C++', 'Scheme'],
+
       }
     };
   },

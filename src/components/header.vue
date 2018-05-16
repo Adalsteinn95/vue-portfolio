@@ -9,7 +9,7 @@ export default {
   name: 'Header',
   data() {
     return {
-        m: 'hallo',
+        msg: 'hallo',
     };
   },
 };

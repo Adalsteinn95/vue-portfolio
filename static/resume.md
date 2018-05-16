@@ -45,7 +45,7 @@ Referrals
 
 * adjunct
 
-* osk1@hi.is
+* osk@hi.is
 
 
 
