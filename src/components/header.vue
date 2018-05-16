@@ -1,12 +1,14 @@
 <template>
   <div class='header'>
-    <h1>{{ msg }}</h1>
+    <img src="../assets/vinna.jpg">
+    <h1>{{ title }}</h1>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Header',
+  props: ['title','about'],
   data() {
     return {
         msg: 'hallo',

@@ -1,16 +1,16 @@
 <template>
-  <div class='footer'>
+  <div class='skills'>
       <div>{{ msg }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Footer',
-  props: ['about'],
+  name: 'Skills',
+  props: ['data'],
   data() {
     return {
-        msg: 'Footer',
+        msg: 'Skills',
     };
   },
 };

@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/vinna.jpg">
     <router-view/>
   </div>
 </template>
@@ -18,6 +17,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 20px auto;
 }
 
 * {
