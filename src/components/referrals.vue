@@ -1,6 +1,8 @@
 <template>
   <div class='referrals'>
-      <div>{{ msg }}</div>
+      <div>{{ data.name }}</div>
+      <div>{{ data.position }}</div>
+      <div>{{ data.contact }}</div>
   </div>
 </template>
 

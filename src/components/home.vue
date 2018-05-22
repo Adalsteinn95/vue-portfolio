@@ -53,7 +53,7 @@ export default {
       cv: {
         about: {
           description:
-            "Young computer science student looking for a future job",
+            "Young full stack programmer looking out for all the new things in programming!",
           email: "adalsteinn95@gmail.com",
           github: "https://github.com/adalsteinn95",
           linkedIn:
@@ -79,7 +79,7 @@ export default {
         ],
         education: [
           {
-            year: "2015-2018",
+            year: "2015-present",
             school: "University of Iceland",
             subject: "BSc computer science"
           },

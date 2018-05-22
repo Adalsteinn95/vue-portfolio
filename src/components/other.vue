@@ -1,6 +1,9 @@
 <template>
   <div class='other'>
-      <div>{{ msg }}</div>
+      <h1>{{ data.header }}</h1>
+      <div v-for="item in data.items ">
+        <div>{{ item }}</div>
+      </div>
   </div>
 </template>
 
@@ -18,5 +21,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+h1 {
+  font-size: 2em;
+}
+
+.other {
+  border: 2px solid royalblue;
+}
 
 </style>
