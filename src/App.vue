@@ -16,11 +16,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto 20px auto;
+  margin: 50px auto ;
+  box-shadow: 0 0 40px #777;
 }
+
+
 
 * {
   margin: 0;

@@ -1,5 +1,6 @@
 <template>
   <div class='home'>
+    <vue-nav v-bind:data="nav"></vue-nav>
     <vue-header v-bind:title="header" v-bind:about="cv.about"/>
     <div class='educations'>
       <div v-for="education in cv.education" :key="education.year">
@@ -44,12 +45,22 @@ import Experience from "@/components/experience";
 import Referrals from "@/components/referrals";
 import Other from "@/components/other";
 import Skills from "@/components/skills";
+import Nav from "@/components/nav";
 
 export default {
   name: "home",
   data() {
     return {
       header: "Aðalsteinn Ingi Pálsson",
+      nav: [
+        "About",
+        "projects",
+        "education",
+        "experience",
+        "referrals",
+        "programmingLang",
+        "other",
+      ],
       cv: {
         about: {
           description:
@@ -162,6 +173,7 @@ export default {
     vueReferrals: Referrals,
     vueExperience: Experience,
     vueSkills: Skills,
+    vueNav: Nav
   }
 };
 </script>
