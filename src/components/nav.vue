@@ -1,13 +1,14 @@
 <template>
   <div class='navigate'>
-    <div v-for="item in data" :key="item" >
-      <h2>{{ item }}</h2>
-    </div>
-    <h1>{{ data[0] }}</h1>
     <div v-on:click="navActive" class="nav-icon" v-bind:class="[isActive ? 'active' : '']">
       <div v-on:hover="navHover" class="nav-line"></div>
       <div v-on:hover="navHover" class="nav-line"></div>
       <div v-on:hover="navHover" class="nav-line"></div>
+    </div>
+    <div class='navigate__items' v-bind:class="[isActive ? 'navigate__items--on' : '']" >
+      <div v-for="item in data" :key="item" >
+       <h2>{{ item }}</h2>
+      </div>
     </div>
   </div>
 
@@ -35,6 +36,33 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .navigate {
+  position: absolute;
+}
+
+.navigate__items {
+  position: fixed;
+  left: -300px;
+  display: flex;
+  flex-direction: column;
+  background-color: purple;
+  border-radius: 10px;
+  color: gold;
+  transition: 0.5s ease-in;
+  opacity: 0;
+}
+
+
+.navigate__items div {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  justify-content: center;
+  padding: 15px;
+}
+
+.navigate__items--on {
+  left: 100px;
+  opacity: 1;
 }
 
 .nav-line {
