@@ -44,15 +44,22 @@ export default {
   left: -300px;
   display: flex;
   flex-direction: column;
-  background-color: purple;
+  background: #16222A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 10px;
-  color: gold;
+
+  color: gold;  /* fallback for old browsers */
+  color: -webkit-linear-gradient(to bottom, #EDDE5D, gold);  /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to bottom, #EDDE5D, gold); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   transition: 0.5s ease-in;
   opacity: 0;
 }
 
 
 .navigate__items div {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
   display: flex;
   flex-direction: column;
   height: 60px;
@@ -61,7 +68,7 @@ export default {
 }
 
 .navigate__items--on {
-  left: 100px;
+  left: 60px;
   opacity: 1;
 }
 
@@ -104,6 +111,28 @@ export default {
 
 .active div:nth-child(3){
   transform: rotate(45deg);
+}
+
+
+@media (max-width: 1800px) {
+  .navigate__items div {
+    font-size: 1em;
+  }
+}
+@media (max-width: 1750px) {
+  
+  .navigate__items {
+    left: 30px;
+  }
+
+  
+  
+}
+
+@media (max-width: 1650px) {
+  .navigate__items {
+    opacity: 0;
+  }
 }
 
 </style>
