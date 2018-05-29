@@ -1,13 +1,13 @@
 <template>
   <div class='navigate'>
     <div v-on:click="navActive" class="nav-icon" v-bind:class="[isActive ? 'active' : '']">
-      <div v-on:hover="navHover" class="nav-line"></div>
-      <div v-on:hover="navHover" class="nav-line"></div>
-      <div v-on:hover="navHover" class="nav-line"></div>
+      <div class="nav-line"></div>
+      <div class="nav-line"></div>
+      <div class="nav-line"></div>
     </div>
     <div class='navigate__items' v-bind:class="[isActive ? 'navigate__items--on' : '']" >
       <div v-for="item in data" :key="item" >
-       <h2>{{ item }}</h2>
+       <h2><a :href="item.link">{{ item.name }}</a></h2>
       </div>
     </div>
   </div>
@@ -20,8 +20,6 @@ export default {
   props: ["data"],
   data() {
     return {
-      msg: "hallo",
-      navHover: 'hello',
       isActive: false,
     };
   },
@@ -48,6 +46,7 @@ export default {
   background: -webkit-linear-gradient(to bottom, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 10px;
+  min-width: 225px;
 
   color: gold;  /* fallback for old browsers */
   color: -webkit-linear-gradient(to bottom, #EDDE5D, gold);  /* Chrome 10-25, Safari 5.1-6 */

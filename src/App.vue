@@ -70,6 +70,11 @@ q:after {
   content: none;
 }
 
+h1 {
+  font-size: 4em;
+  font-family: 'Raleway', sans-serif;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;

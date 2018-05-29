@@ -2,32 +2,33 @@
   <div class='home'>
     <vue-nav v-bind:data="nav"></vue-nav>
     <vue-header v-bind:title="header" v-bind:about="cv.about"/>
-    <div class='educations'>
+    <div class='educations' id='education'>
+      <h1>Education</h1>
       <div v-for="education in cv.education" :key="education.year">
         <vue-education v-bind:data="education"/>
       </div>
     </div>
-    <div class='projects'>
-      <div v-for="project in cv.projects" :key="project.title">
-        <vue-project v-bind:data="project"/>
-      </div>
-    </div>
-    <div class='experience'>
+    <div class='experience' id='experience'>
       <div v-for="experience in cv.experience" :key="experience.year">
         <vue-experience v-bind:data="experience" />
       </div>
     </div>
-    <div class='referrals'>
+    <div class='projects' id="projects" >
+      <div v-for="project in cv.projects" :key="project.title">
+        <vue-project v-bind:data="project"/>
+      </div>
+    </div>
+    <div class='referrals' id="referrals" >
       <div v-for="referral in cv.referrals" :key="referral.name">
         <vue-referrals v-bind:data="referral" />
       </div>
     </div>
-    <div class="skills">
+    <div class="skills" id="skills">
       <div v-for="skill in cv.programmingLang" :key="skill.name">
         <vue-skills v-bind:data="skill" />
       </div>
     </div>
-    <div class="other">
+    <div class="other" id="other">
       <div v-for="item in cv.Other" :key="item.header">
         <vue-other v-bind:data="item" />
       </div>
@@ -53,13 +54,19 @@ export default {
     return {
       header: "Aðalsteinn Ingi Pálsson",
       nav: [
-        "About",
-        "projects",
-        "education",
-        "experience",
-        "referrals",
-        "programmingLang",
-        "other",
+        {
+          name: "About",
+          link: "#About"
+        },
+        {
+          name: "projects",
+          link: "#projects"
+        },
+        { name: "education", link: "#education" },
+        { name: "experience", link: "#experience" },
+        { name: "referrals", link: "#referrals" },
+        { name: "skills", link: "#skills" },
+        { name: "other", link: "#other" }
       ],
       cv: {
         about: {
@@ -92,12 +99,15 @@ export default {
           {
             year: "2015-present",
             school: "University of Iceland",
-            subject: "BSc computer science"
+            subject: "BSc computer science",
+            logo:
+              "https://beyondborders.dtu.dk/bb_library/University%20of%20Iceland/University%20of%20Iceland%20-%20School%20of%20Engineering/Images/logo-hi-dtu%202.jpg"
           },
           {
             year: "2011-2015",
             school: "Menntaskólinn við Sund",
-            subject: "Stúdentspróf"
+            subject: "Stúdentspróf",
+            logo: "https://www.msund.is/logo.png"
           }
         ],
         experience: [
@@ -194,5 +204,17 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.educations {
+  margin-top: 5em;
+}
+
+.home > div {
+  border: 3px dotted black;
+}
+
+.home > div:target {
+  background-color: red;
 }
 </style>
